@@ -31,7 +31,7 @@ public class ApplicationRunner {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+    }System.out.println(" get the bulb")
 }
 //This code uses the Runtime.getRuntime().exec(String command) method to execute the 
 //command to open the application. The exec method takes a string argument which is the 
