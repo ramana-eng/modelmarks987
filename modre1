@@ -19,3 +19,36 @@ public class filemng {
 }
 
 
+import java.io.IOException;
+
+public class ApplicationRunner {
+    public static void main(String[] args) {
+        try {
+            // Specify the path to the application
+            String applicationPath = "C:\\Users\\user\\Desktop\\Tor\\Browser\\firefox.exe";
+            // Execute the application using the Runtime class
+            Runtime.getRuntime().exec(applicationPath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+//This code uses the Runtime.getRuntime().exec(String command) method to execute the 
+//command to open the application. The exec method takes a string argument which is the 
+//command to run the application. In this case, it is the path of the application.
+//
+//Please note that you need to replace the path/to/application.exe with the actual 
+//path of the application.
+//
+//It is worth noting that using this method to open an application is platform
+//dependent and it might not work as expected on all Operating Systems. Additionally, 
+//this method opens the application and continues execution of the code, it does not wait 
+//for the application to close.
+//
+//Also, it's worth noting that this approach may have security concerns, as it opens up 
+//the possibility of running malicious software on the user's machine.
+
+
+
+
+
