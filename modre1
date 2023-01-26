@@ -1,1 +1,36 @@
+////
+////This code uses the File class to create a File object representing the 
+//folder whose contents you want to list. It then calls the listFiles() method on 
+//that object to get an array of all the files in the folder. It then uses a for loop to 
+//iterate over the array and print the names of all the files in the folder using 
+//the getName() method.
+////
+////It also check if the current file is a file or directory
+//using isFile() method, so that only files are printed.
+////
+////Please note that you need to replace the path/to/folder with the actual path of the folder.
+////
+
+
+
+
+
+import java.io.File;
+
+public class FileLister {
+    public static void main(String[] args) {
+        // Specify the folder to list files from
+        File folder = new File("E:\\git");
+        // Get an array of all the files in the folder
+        File[] files = folder.listFiles();
+
+        // Print the names of all the files in the folder
+        for (File file : files) {
+            if (file.isFile()) {
+                System.out.println(file.getName());
+            }
+        }
+    }
+}
+
 
